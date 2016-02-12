@@ -21,7 +21,11 @@ COPY librato/confd /usr/src/app/config/confd
 
 RUN rm /opt/collectd/etc/collectd.conf.d/swap.conf && \
     rm /opt/collectd/etc/collectd.conf.d/librato.conf && \
-    rm /opt/collectd/etc/collectd.conf.d/varnish.conf
+    rm /opt/collectd/etc/collectd.conf.d/varnish.conf && \
+    rm /opt/collectd/etc/collectd.conf.d/nginx.conf && \
+    rm /opt/collectd/etc/collectd.conf.d/nginx_plus.conf && \
+    rm /opt/collectd/etc/collectd.conf.d/redis.conf && \
+    rm /opt/collectd/etc/collectd.conf.d/memcached.conf
 
 # Override confd.service
 COPY librato/confd.service /etc/systemd/system/
