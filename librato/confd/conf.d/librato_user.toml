@@ -1,0 +1,9 @@
+[template]
+src = "user.conf.tmpl"
+dest = "/opt/collectd/etc/collectd.conf.d/user.conf"
+keys = [
+  "/instanceid",
+  "/zone",
+  "/service",
+  "/stackname"
+]
